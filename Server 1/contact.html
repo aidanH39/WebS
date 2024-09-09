@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&family=Roboto:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    
+    <div id="nav">
+        <div class="left">
+            <h1>AIDAN</h1>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="./index.html">Welcome</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li class="selected">Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bg" class="fadeIn">
+        <img src="./img/languages/html.png">
+        <img src="./img/languages/css.png">
+        <img src="./img/languages/java.png">
+        <img src="./img/languages/python.png">
+        <img src="./img/languages/c_sharp.png">
+    </div>
+
+    <div class="metahead">
+        <div class="head">
+            Full Stack Developer
+        </div>
+        <div class="sub-head">
+            <p id="sub-head-text" style="margin-top: 0;">Programming experience in 12+ languages</p>
+        </div>
+    </div>
+
+    <div class="wrapper fadeIn">
+        <div class="form">
+            <h2>Contact</h2>
+            <form>
+                <label title="Email will be used to reply to you">Email</label>
+                <input type="email">
+
+                <label>Title</label>
+                <input type="text">
+
+                <label>Content</label>
+                <textarea></textarea>
+
+                <input type="submit" value="Send">
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="social">
+
+        <i class="fa-brands fa-square-github github"></i>
+        <i class="fa-brands fa-linkedin linkedin"></i>
+        <i class="fa-brands fa-square-x-twitter x"></i>
+        <i class="fa-brands fa-square-facebook facebook"></i>
+
+    </div>
+
+
+</body>
+
+<script>
+    window.addEventListener("scroll", reveal);
+</script>
+
+</html>
+
+<style>
+
+    #bg {
+        position: fixed;
+    }
+
+    #bg img {
+        position: fixed;
+        height: 128px;
+        filter: opacity(0.2);
+    }   
+
+    #bg img:nth-child(1) {
+        left: 550px;
+        top: 280px;
+    }
+
+    #bg img:nth-child(2) {
+        left: 1050px;
+        top: 280px;
+    }
+
+    #bg img:nth-child(3) {
+        left: 1250px;
+        top: 680px;
+    }
+
+    #bg img:nth-child(4) {
+        left: 1350px;
+        top: 280px;
+    }
+
+    #bg img:nth-child(5) {
+        left: 1550px;
+        top: 480px;
+    }
+
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+
+
+    .metahead {
+        transition-timing-function: ease-out;
+        animation: welcome_meta 2s forwards;
+    }
+
+    .head {
+        transition-timing-function: ease-out;
+        animation: welcome_heading 2s forwards;
+    }
+
+    .sub-head {
+        transition-timing-function: ease-out;
+        animation: welcome_subheading 2s forwards;
+    }
+
+    @media only screen and (max-width: 760px) {
+
+        .metahead {
+            width: 360px;
+            margin: 0;
+            padding: 110px 20px 0px 20px;
+            animation: none;
+
+        }
+
+        form {
+            width: auto;
+        }
+
+    }
+
+    .project img {
+        height: 255px;
+        border-radius: 8px;
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+
+    .project .tags {
+        justify-content: center;
+    }
+
+    .project {
+        width: fit-content;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .project:hover {
+        background-color: #ffffff1f;
+        border-radius: 8px;
+    }
+
+    .projects {
+        width: 60vw;
+        display: flex;
+        flex-wrap: wrap;
+        place-content: space-around;
+    }
+</style>

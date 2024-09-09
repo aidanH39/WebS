@@ -1,0 +1,587 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+        transform: scale(1);
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+/* Website */
+
+html {
+    background: #141e33;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    font-family: 'Poppins';
+    /*background: linear-gradient(180deg, #6d007da8, #141e33);*/
+    background: linear-gradient(180deg, #050025a8, #141e33);
+    margin: 0;
+    height: 100vh;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.wrapper {
+    margin: 0px 40px 0px 40px;
+}
+
+#nav {
+    height: 80px;
+    width: 100%;
+}
+
+#nav .left {
+    padding: 0px 0px 0px 40px;
+    font-size: 22px;
+}
+
+#nav li.selected {
+    color: white;
+}
+
+#nav li {
+    color: #9f9f9f;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.metahead {
+    padding: 140px 4vw 0vw 80px;
+}
+
+.head {
+    font-size: 5vw;
+    font-weight: 800;
+}
+
+.sub-head {
+    font-size: 2vw;
+    color: #a1a1a1;
+    font-weight: 700;
+}
+
+
+
+/* Typing Animation */
+
+.code {
+    display: inline-block;
+    margin-top: -15px;
+}
+
+.code h2 {
+    overflow: hidden;
+    border-right: .08em solid white;
+    white-space: nowrap;
+    font-size: 35px;
+    /*width: 0;*/
+    color: rgb(185 185 185);
+}
+
+.code h2.type {
+    animation: blink 1s infinite;
+}
+
+
+@keyframes typing {
+    0% {
+        width: 0
+    }
+
+    20% {
+        width: 100%
+    }
+
+    80% {
+        width: 100%
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent
+    }
+
+    to {
+        border-color: rgb(225, 225, 225);
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        opacity: 0;
+    }
+}
+
+#typing_img {
+    position: absolute;
+    height: 70px;
+    float: left;
+    margin-right: 20px;
+    transition: 1s all;
+    filter: grayscale(500%)
+}
+
+.typing_box {
+    padding: 70px 20px 20px 0px;
+}
+
+
+
+
+.right ul {
+    margin-right: 30px;
+}
+
+
+
+
+
+/* Socials */
+
+.social {
+    display: flex;
+    flex-direction: column;
+    font-size: 42px;
+    padding: 20px;
+    color: #ffffff5c;
+    width: 37px;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.social i {
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#comment {
+    background: black;
+}
+
+.social .github:hover {
+    color: #292929;
+}
+
+.social .linkedin:hover {
+    color: #126BC4;
+}
+
+.social .x:hover {
+    color: #080808;
+}
+
+.social .facebook:hover {
+    color: #0863F8;
+}
+
+
+/* Default HTML tags */
+
+a {
+    color: #08a0f8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #b3e3ff;
+}
+
+/* Navigation Bar */ 
+
+#nav a {
+    color: #9f9f9f;
+    font-weight: normal;
+}
+
+#nav a:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+.css-selector {
+    background: linear-gradient(270deg, #9b9b9b, #c8c8c8, #6000ff);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+#sub-head-text {
+    margin-top: 0;
+    background: linear-gradient(313deg, #c487ff, #c8c8c8, #6000ff, #818181, #8c5eff, #ed44ff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: AnimationName 30s ease infinite;
+}
+
+
+/* Responsive */ 
+
+@media only screen and (max-width: 760px) {
+    #nav .right {
+        float: none;
+    }
+
+    #nav .right ul {
+        justify-content: center;
+    }
+
+    #nav .left {
+        float: none;
+        text-align: center;
+    }
+
+    #nav {
+        margin-top: -29px;
+        padding-top: 20px;
+    }
+
+    .head {
+        font-size: 42px;
+    }
+
+    .sub-head {
+        font-size: 20px;
+    }    
+
+    .metahead {
+        padding: 140px 80px 0vw 80px;
+    }
+
+    .pnl_frontend img {
+        display: none;
+    }
+
+    .pnl_ {
+        text-align: center;
+    }
+
+    .about_pnl .m20 {
+        margin: 0 !important;
+    }
+
+    .pnl_ h1 {
+        padding-left: 0 !important;
+    }
+
+    .pnl_ .content {
+        padding: 20% 2% 20% 2% !Important;
+    }
+
+    .pnl_ .content.reveal {
+        margin: 60% 0 60% 0 !important;
+    }
+
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #1179ff82;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    margin: 0 6px 6px 6px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffffff2e;
+}
+::-webkit-scrollbar-track {
+    background: #292929;
+}
+
+.m20 {
+    margin: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.about_pnl {
+    padding: 2%;
+    margin-top: 90px;
+}
+
+.box h1 {
+    color: white;
+}
+
+.box {
+    color: #a7a7a7;
+}
+
+
+.fadeIn {
+    opacity: 0%;
+    animation: 2.5s fadeIn forwards;
+}
+
+.pnl_ {
+    background: #000206;
+    padding: 0;
+    height: auto;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pnl_ .icons {
+    font-size: 36px;
+    width: 250px;
+    justify-content: space-around;
+    margin: 20px 20px 20px 40px;
+}
+
+.pnl_ h1 {
+    padding-left: 50px;
+    font-family: 'Roboto';
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-left: 5%;
+    border: #424245 1px solid;
+    margin-right: 5%;
+}
+
+.pnl_ img {
+    padding: 50px;
+}
+
+.pnl_ .content {
+    margin-top: 300px;
+}
+
+.pnl_ .content.reveal {
+    margin: 20%;
+}
+
+.reveal {
+    opacity: 0%;
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-name: fade-bottom;
+    animation-range-end: contain 100%;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+    animation-range-start: contain 0%;
+}
+
+.reveal.active {
+    animation: fade-bottom 1s ease-in forwards;
+}
+
+.untiy-logo {
+    font-size: 250px;
+    text-align: center;
+}
+
+.untiy-logo.active {
+    transition: transform 1s;
+    transform: rotate(350deg);
+}
+
+.down-arrow {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    bottom: 0px;
+}
+
+@keyframes fade-bottom {
+    from {
+      transform: translateY(-100px) scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(100px) scale(1);
+      opacity: 1;
+    }
+  }
+
+.pnl_ p {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+button {
+    background: #0071db;
+    outline: none;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.box {
+    padding: 20px 0px 20px 0px;
+    background: #232323;
+}
+
+.view_more {
+    margin-top: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.view_more:hover {
+    background: #2f2f2f8a;
+}
+
+
+/* Form */
+
+input {
+    padding: 5px;
+    margin-bottom: 30px;
+    width: 300px;
+    border-radius: 4px;
+    border: none;   
+}
+
+input:focus-visible {
+    outline: none;
+    border: none;
+}
+
+textarea:focus-visible {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    height: 250px;
+    resize: none;
+    padding: 5px;
+    font-family: 'Roboto';
+    outline: none;
+}
+
+input[type="submit"] {
+    background: #0071db;
+    outline: none;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    width: auto;
+    margin-bottom: 60px;
+}
+
+
+    /* Projects Animation */
+
+    @keyframes welcome_heading {
+        from {}
+
+        to {
+            font-size: 42px;
+            font-weight: 800;
+        }
+    }
+
+    @keyframes welcome_subheading {
+        from {}
+
+        to {
+            font-size: 22px;
+            color: #a1a1a1;
+            font-weight: 700;
+        }
+    }
+
+    @keyframes welcome_meta {
+        from {
+            font-size: 5vw;
+            font-weight: 800;
+        }
+
+        to {
+            padding: 50px 50px 50px 0px;
+            width: 40vw;
+            margin-left: 50px;
+        }
+    }
+
+    @keyframes welcome_projects {
+        from {
+            opacity: 0%;
+        }
+
+        to {
+            opacity: 100%;
+        }
+    }

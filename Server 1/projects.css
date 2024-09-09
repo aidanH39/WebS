@@ -1,0 +1,277 @@
+/* Projects Animation */
+
+@keyframes welcome_heading {
+    from {
+
+    }
+
+    to {
+        font-size: 42px;
+        font-weight: 800;
+    }
+}
+
+@keyframes welcome_subheading {
+    from {
+
+    }
+
+    to {
+        font-size: 22px;
+        color: #a1a1a1;
+        font-weight: 700;
+    }
+}
+
+@keyframes welcome_meta {
+    from {
+        font-size: 5vw;
+        font-weight: 800;
+    }
+    to {
+        padding: 50px 50px 50px 0px;
+        width: 40vw;
+        margin-left: 50px;
+    }
+}
+
+@keyframes welcome_projects {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.metahead {
+    transition-timing-function: ease-out;
+    animation: welcome_meta 2s forwards;
+}
+
+.head {
+    transition-timing-function: ease-out;
+    animation: welcome_heading 2s forwards;
+}
+
+.sub-head {
+    transition-timing-function: ease-out;
+    animation: welcome_subheading 2s forwards;
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.project {
+    margin: 12px;
+    padding: 12px;
+    animation: welcome_projects 1s forwards;
+    animation-delay: 200ms;
+    opacity: 0%;
+    width: 680px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project:hover {
+    background: #ffffff08;
+    box-shadow: inset 1px 1px 20px 20px #45454521;
+    transform: scale(1.05);
+}
+
+
+.content {
+    height: auto;
+    margin-left: 270px;
+    font-size: 14px;
+    color: #d1d1d1;
+    padding-right: 10px;
+}
+
+.project h2 {
+    font-size: 20px;
+}
+
+.project img {
+    height: 125px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 40px;
+    background: black;
+}
+
+.projects:hover > .project .content {
+    color: #f9f9f942;
+}
+
+.project:hover > .content {
+    color: white !important;
+}
+
+.project:hover > .content .link-icon {
+    display: block;
+    font-size: 20px;
+}
+
+.project .link-icon {
+    position: absolute;
+    right: 30px;
+    color: white;
+    transition: 0.5s all;
+    display: none;
+}
+
+.project:hover > .content .tag {
+    background: #1179ff !important;
+}
+
+
+
+#project-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #232323e0;
+
+    display: none;
+}
+
+#project-popup .content {
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 160px;
+    background: #232323e0;
+    padding: 30px;
+    height: 60vh;
+    border-radius: 8px;
+    box-shadow: 0 0 40px 4px #111118;
+}
+
+#project-popup .desc {
+    overflow: auto;
+    height: 39%;
+}
+
+.image-slider img {
+    height: 0px;
+    width: auto;
+    transition: all 0.5s;
+}
+
+.image-slider img.show {
+    height: 225px;
+}
+
+.image-slider {
+    height: 230px;
+    text-align: center;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+}
+
+.buttons button {
+    padding: 10px;
+    background: #0070ffb0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buttons button:hover {
+    background-color: rgb(0, 110, 255)
+}
+
+.image-slider .left, .image-slider .right {
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.image-slider div i {
+    font-size: 32px;
+}
+
+#project-popup .content h2 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#project-popup .tags {
+    margin-bottom: 5px;
+}
+
+
+
+@media only screen and (max-width: 760px) {
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .project img {
+        height: auto;
+    }
+
+    .project .content {
+        margin-left: 0px;
+        width: auto;
+    }
+
+    .metahead {
+        width: auto;
+        margin: 0;
+        padding: 110px 20px 0px 20px;
+        animation: none;
+        
+    }
+
+    #project-popup .content {
+        width: 85vw;
+        height: 60vh;
+        margin: 0;
+        padding: 10px 20px 20px 20px;
+        margin: 0 auto;
+        margin-top: 20vh;
+    }
+
+    .image-slider {
+        height: 180px;
+        text-align: center;
+        padding-top: 60px;
+        display: none; /* for now */
+    }
+
+    .image-slider img.show {
+        height: 180px;
+    }
+
+    #project-popup .desc {
+        overflow: auto;
+        height: 60%;
+    }
+
+    .buttons {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+}

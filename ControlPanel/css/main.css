@@ -1,0 +1,188 @@
+html {
+    background-color: #2f2f2f;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+
+
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(10 10 10) 3%, rgb(48 48 48 / 0%) 38%, rgb(18 0 255 / 6%) 68%);
+    animation: gradient 35s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgba(147, 147, 147, 0.336);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 20s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+/* Dashboard Navbar */
+
+.navbar {
+    background-color: #2f2f2f;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    transition: 0.8s all;
+    z-index: 1;
+}
+
+.heading {
+    text-align: center;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.navbar:hover {
+    width: 250px;
+}
+
+
+
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border-right: 3px solid #ffffff1f;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.137);
+}
+
+.item.active {
+    background: #ffffff0a;
+    border-right: 3px solid #0079ffd1;
+}
+
+.item i {
+    font-size: 22px;
+}
+
+.item p {
+    margin-left: 20px;
+    transition: 0.2s all;
+    opacity: 0;
+    
+}
+
+.navbar:hover > .items .item p {
+    transition: 0.8s all;
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Wrapper */
+
+.wrapper {
+    margin-left: 80px;
+    position: fixed;
+    overflow: auto;
+}
+
+.widgets {
+    display: flex;
+    padding: 20px;
+}
+
+.widget {
+    background: #00000082;
+    margin: 10px;
+}
+
+.widgets {
+    display: flex;
+    padding: 20px;
+}
+
+.widget .header {
+    border-left: 3px solid #0098ff;
+    padding-left: 10px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    background: #0000008c;
+}
+
+.widget .content {
+    padding: 0px 20px 20px 20px;
+}

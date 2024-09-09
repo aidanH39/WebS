@@ -1,0 +1,23 @@
+         
+
+    ██╗    ██╗███████╗██████╗ ███████╗    ██████╗     ██████╗ 
+    ██║    ██║██╔════╝██╔══██╗██╔════╝    ╚════██╗   ██╔═████╗
+    ██║ █╗ ██║█████╗  ██████╔╝███████╗     █████╔╝   ██║██╔██║
+    ██║███╗██║██╔══╝  ██╔══██╗╚════██║    ██╔═══╝    ████╔╝██║
+    ╚███╔███╔╝███████╗██████╔╝███████║    ███████╗██╗╚██████╔╝
+    ╚══╝╚══╝ ╚══════╝╚═════╝ ╚══════╝    ╚══════╝╚═╝ ╚═════╝ 
+                                                      
+              
+                           
+[INFO] Started logging for server `localhost:2000`...
+[INFO] Starting TCP server...
+[INFO] Started HTTP Web Server on address 'localhost:2000'...
+[ACCESS] 127.0.0.1 | HTTP/1.1 200 (GET) /
+[ACCESS] 127.0.0.1 | HTTP/1.1 404 (GET) /favicon.ico
+[ACCESS] 127.0.0.1 | HTTP/1.1 200 (GET) /testing/
+[ACCESS] 127.0.0.1 | HTTP/1.1 200 (GET) /testing/oh/
+[ACCESS] 127.0.0.1 | HTTP/1.1 200 (GET) /testing/oh/woha.txt
+[ACCESS] 127.0.0.1 | HTTP/1.1 404 (GET) /server1
+[ACCESS] 127.0.0.1 | HTTP/1.1 404 (GET) /api/server1
+[ACCESS] 127.0.0.1 | HTTP/1.1 404 (GET) /api/server1
+[ACCESS] 127.0.0.1 | HTTP/1.1 200 (GET) /
